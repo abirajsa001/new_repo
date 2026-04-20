@@ -1,17 +1,21 @@
-import * as dotenv from 'dotenv';
-dotenv.config();
 import { setupFastify } from './server/server';
-(async () => {
-  const server = await setupFastify();
 
-  const HOST = '0.0.0.0';
+(async () => {
+  console.log('🚀 Starting application...');
+
   try {
+    const server = await setupFastify();
+
+    const PORT = Number(process.env.PORT) || 8080;
+
     await server.listen({
-      port: 8080,
-      host: HOST,
+      port: PORT,
+      host: '0.0.0.0',
     });
+
+    console.log(`✅ Server running on port ${PORT}`);
   } catch (err) {
-    server.log.error(err);
+    console.error('❌ Startup error:', err);
     process.exit(1);
   }
 })();
