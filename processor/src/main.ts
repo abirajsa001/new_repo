@@ -1,7 +1,7 @@
 import { setupFastify } from './server/server';
 
 (async () => {
-  console.log('🚀 Starting application...');
+  console.log('Starting application...');
 
   try {
     const server = await setupFastify();
@@ -13,9 +13,9 @@ import { setupFastify } from './server/server';
       host: '0.0.0.0',
     });
 
-    console.log(`✅ Server running on port ${PORT}`);
+    console.log(` Server running on port ${PORT}`);
   } catch (err) {
-    console.error('❌ Startup error:', err);
+    console.error(' Startup error:', err);
     process.exit(1);
   }
 })();
