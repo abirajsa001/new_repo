@@ -1,21 +1,21 @@
-import { setupFastify } from './server/server';
+import Fastify from 'fastify';
 
 (async () => {
-  console.log('Starting application...');
+  console.log(' Minimal test starting');
+
+  const app = Fastify();
+
+  app.get('/', async () => {
+    return { ok: true };
+  });
+
+  const PORT = Number(process.env.PORT) || 8080;
 
   try {
-    const server = await setupFastify();
-
-    const PORT = Number(process.env.PORT) || 8080;
-
-    await server.listen({
-      port: PORT,
-      host: '0.0.0.0',
-    });
-
-    console.log(` Server running on port ${PORT}`);
+    await app.listen({ port: PORT, host: '0.0.0.0' });
+    console.log(' Minimal server running');
   } catch (err) {
-    console.error(' Startup error:', err);
+    console.error('Error:', err);
     process.exit(1);
   }
 })();
