@@ -1,21 +1,25 @@
 import Fastify from 'fastify';
 
 (async () => {
-  console.log(' Minimal test starting');
-
-  const app = Fastify();
-
-  app.get('/', async () => {
-    return { ok: true };
-  });
-
-  const PORT = Number(process.env.PORT) || 8080;
+  console.log('Minimal server booting...');
 
   try {
-    await app.listen({ port: PORT, host: '0.0.0.0' });
-    console.log(' Minimal server running');
+    const app = Fastify();
+
+    app.get('/', async () => {
+      return { status: 'ok' };
+    });
+
+    const PORT = Number(process.env.PORT) || 8080;
+
+    await app.listen({
+      port: PORT,
+      host: '0.0.0.0',
+    });
+
+    console.log(`Running on ${PORT}`);
   } catch (err) {
-    console.error('Error:', err);
+    console.error('Crash:', err);
     process.exit(1);
   }
 })();
