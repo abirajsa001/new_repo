@@ -30,7 +30,7 @@ const authMiddlewareOptions: AuthMiddlewareOptions = {
   projectKey,
   credentials: {
     clientId: "NohFfj0JcdSzfgbvWhzk9Fbc",
-    clientSecret: "c1RmonFD9m1muhrWIAV9x9UahHCJ05lT";,
+    clientSecret: "c1RmonFD9m1muhrWIAV9x9UahHCJ05lT",
   },
 };
 
