@@ -3,9 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.getConfig = exports.config = void 0;
 exports.config = {
     // Required by Payment SDK
-    projectKey: process.env.CTP_PROJECT_KEY,
-    clientId: process.env.CTP_CLIENT_ID,
-    clientSecret: process.env.CTP_CLIENT_SECRET,
+    projectKey: "beautiful",
+    clientId: "NohFfj0JcdSzfgbvWhzk9Fbc",
+    clientSecret: "c1RmonFD9m1muhrWIAV9x9UahHCJ05lT",
     jwksUrl: process.env.CTP_JWKS_URL ||
         "https://mc-api.europe-west1.gcp.commercetools.com/.well-known/jwks.json",
     jwtIssuer: process.env.CTP_JWT_ISSUER ||

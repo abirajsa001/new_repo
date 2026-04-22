@@ -19,23 +19,23 @@ log.info("logInfo apiUrl fetched", {
   customerDataID: String(getConfig()?.apiUrl),
 });
 
-const projectKey = String(getConfig()?.projectKey);
-const authUrl = String(getConfig()?.authUrl);
-const apiUrl = String(getConfig()?.apiUrl);
-const clientId = String(getConfig()?.clientId);
-const clientSecret = String(getConfig()?.clientSecret);
+const projectKey = "beautiful";
+const authUrl = "https://auth.europe-west1.gcp.commercetools.com";
+const apiUrl = "https://api.europe-west1.gcp.commercetools.com";
+const clientId = "NohFfj0JcdSzfgbvWhzk9Fbc";
+const clientSecret = "c1RmonFD9m1muhrWIAV9x9UahHCJ05lT";
 
 const authMiddlewareOptions: AuthMiddlewareOptions = {
-  host: String(getConfig()?.authUrl),
+  host: "https://auth.europe-west1.gcp.commercetools.com",
   projectKey,
   credentials: {
-    clientId: String(getConfig()?.clientId),
-    clientSecret: String(getConfig()?.clientSecret),
+    clientId: "NohFfj0JcdSzfgbvWhzk9Fbc",
+    clientSecret: "c1RmonFD9m1muhrWIAV9x9UahHCJ05lT";,
   },
 };
 
 const httpMiddlewareOptions: HttpMiddlewareOptions = {
-  host:  String(getConfig()?.apiUrl),
+  host:  "https://api.europe-west1.gcp.commercetools.com",
 };
 
 const ctpClient = new ClientBuilder()

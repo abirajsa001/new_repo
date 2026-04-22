@@ -12,8 +12,8 @@ const authOptions: AuthMiddlewareOptions = {
   host: config.authUrl,
   projectKey: config.projectKey,
   credentials: {
-    clientId: config.clientId,
-    clientSecret: config.clientSecret,
+    clientId:  "NohFfj0JcdSzfgbvWhzk9Fbc",
+    clientSecret:  "c1RmonFD9m1muhrWIAV9x9UahHCJ05lT",
   },
 };
 
